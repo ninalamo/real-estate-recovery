@@ -1,4 +1,4 @@
-export const ApplicationName = 'Real Estate Recovery v1.0';
+export const ApplicationName = 'Project1';
 
 export const QueryParameterNames = {
   ReturnUrl: 'returnUrl',
