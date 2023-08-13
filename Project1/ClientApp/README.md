@@ -1,5 +1,9 @@
 
+
+
 ## Setup
+
+### react app
 
 Make sure to `npm install` the following: `react-leaflet`, `leaflet` and `react-leaflet-vector-tile-layer`.
 
@@ -12,6 +16,11 @@ Use the following connectionstring format:<br/>
     "DefaultConnection": "Server=localhost;Database=aspnet-Project1;User Id=xxx;Password=xxx;TrustServerCertificate=true;MultiSubNetFailover=True;"
   },
 `
+
+### .Net Core
+
+Run migration for EF Core: <br/> 
+`"C:\Program Files\dotnet\dotnet.exe" ef database update --project Project1\Project1.csproj --startup-project Project1\Project1.csproj --context Project1.Data.ApplicationDbContext --configuration Debug 00000000000000_CreateIdentitySchema`
 
 ## Running the app
 
