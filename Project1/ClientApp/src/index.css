@@ -1,0 +1,36 @@
+@import url("https://esm.sh/leaflet@1.9.4/dist/leaflet.css");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@media (max-width: 575px) {
+  .mobile-50 {
+    height: calc(var(--vh) * 50) !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .desktop-100 {
+    height: 100vh !important;
+  }
+}
+
+.vertical-scroll {
+  overflow-y: auto;
+}
+
+/** Remove sidebar split padding*/
+#root > .row > * {
+  padding: 0;
+}
