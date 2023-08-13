@@ -27,7 +27,7 @@ Run migration for EF Core: <br/>
 On the terminal or command-line, run `dotnet run` command. Make sure you have installed latest .NET 7.0 SDK and Node.js (latest).
 
 
-## Diagram
+## Diagram for Self-Contained .Net Core + React App
 ```mermaid
 sequenceDiagram
     participant real-estate-recovery-app
@@ -39,3 +39,18 @@ sequenceDiagram
     dotnet-api-project->>real-estate-recovery-app: Response
 ```
 
+### Sample react-app 
+
+```
+try {
+    const token = await authService.getAccessToken();
+    const response = await fetch('weatherforecast', {
+    headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
+    });
+    const data = await response.json();
+    setForecasts(data);
+    setLoading(false);
+    } catch (error) {
+console.error('Error fetching weather data:', error);
+}
+```
