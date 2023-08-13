@@ -25,3 +25,15 @@ Run migration for EF Core: <br/>
 ## Running the app
 
 On the terminal or command-line, run `dotnet run` command. Make sure you have installed latest .NET 7.0 SDK and Node.js (latest).
+
+```mermaid
+sequenceDiagram
+    participant real-estate-recovery-app
+    participant dotnet-api-project
+    real-estate-recovery-app->>dotnet-api-project: login
+    dotnet-api-project->>real-estate-recovery-app: JWT Token
+    Note right of real-estate-recovery-app: Request with Authentication Bearer
+    real-estate-recovery-app->>dotnet-api-project: Request
+    dotnet-api-project->>real-estate-recovery-app: Response
+```
+
