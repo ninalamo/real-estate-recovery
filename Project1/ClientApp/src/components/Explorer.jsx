@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import MapProvider from "../contexts/MapContext";
 import Filter from "./map/Filter";
 import Map from "./map/Map";
@@ -6,7 +6,7 @@ import PoiCard from "./map/PoiCard";
 
 const Explorer = () => {
   
-    const markers = [
+    const [markers, setMarkers] = useState([
         {
           id: "4683D991-AAE4-4CF8-94F4-E920E619C3FD",
           location: { lat: 14.631430775054255, lng: 121.00490039556313 },
@@ -87,7 +87,11 @@ const Explorer = () => {
           area: 23500,
           value: 2350000000,
         }
-      ];
+      ]);
+
+    useEffect(() => {
+        //todo: fetch api here
+    }, []);
 
   const [filter, setFilter] = useState("");
   const zoom = 20;
